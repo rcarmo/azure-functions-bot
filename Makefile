@@ -25,5 +25,11 @@ delete:
 
 # WIP: handle local Git setup (already covered in ARM template)
 scm:
-	az webapp deployment source config-local-git -n bot-faas -g faas-template -o tsv
-	# az webapp deployment user set --user-name $(SOLUTION_NAME) --password $(PASSWORD)
+	# set up the credential store and set the helper to only prompt us daily
+	-git config credential.helper store
+	-git config credential.helper 'cache --timeout 38400'
+	# grab the GIT_URL from az
+	$(eval GIT_URL:=$(shell az webapp deployment source config-local-git --name $(SOLUTION_NAME) --resource-group $(RESOURCE_GROUP) -o tsv))
+	# add a new remote to this repository so we can "git push azure master"
+	git remote add --mirror=push azure $(GIT_URL)
+	az webapp deployment user set --user-name $(SOLUTION_NAME)
