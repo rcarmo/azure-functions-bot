@@ -1,7 +1,8 @@
 {
   "name": "static_server_node",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple Azure Functions static file server",
+  "repository": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
