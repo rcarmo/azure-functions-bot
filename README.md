@@ -31,6 +31,7 @@ Grab `bash`, check out the `Makefile` and you'll be all set.
 * [x] Configure Azure Function deployment settings
 * [x] Deploy Redis
 * [x] Retrieve/Set AppService local Git credentials and deployment remote programmatically
+* [ ] Simple static server inside Functions app
 * [ ] Simple bot back-end
 * [ ] Simple web front-end for anonymous chats
 * [ ] Bot registration
@@ -44,12 +45,15 @@ Grab `bash`, check out the `Makefile` and you'll be all set.
 [n]: https://nodejs.org
 
 
-## Bootstrapping from a new development machine
+## Bootstrapping a new development machine
 
 If you don't have _anything_ installed, this is what you need to do (generic instructions for Debian-based systems - may require `sudo` or tweaking your `$PATH`):
 
         apt install nodejs npm python-pip
         pip install -U azure-cli
+
+## Deploying from scratch
+    
         az login
         az account list # check available accounts
         az account set -s <UUID> # set working account
