@@ -53,6 +53,3 @@ If you don't have _anything_ installed, this is what you need to do (generic ins
         make params
         make deploy
         make view-deployment
-
-
-## 
