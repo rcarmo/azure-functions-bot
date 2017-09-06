@@ -1,5 +1,4 @@
 {
-  "id": "",
   "queues": {
     // The maximum interval in milliseconds between
     // queue polls. The default is 1 minute.
@@ -30,13 +29,13 @@
     // This limit will include requests that are queued but have not started executing, as well as any in progress executions. 
     // Any incoming requests over this limit will be rejected with a 429 "Too Busy" response. 
     // The default is 'unbounded'.
-    "maxOutstandingRequests": "unbounded",
+    "maxOutstandingRequests": -1,
     // The maximum number of http functions that will be executed in parallel. 
     // The default is "unbounded".
-    "maxConcurrentRequests": "unbounded",
+    "maxConcurrentRequests": -1,
     // When enabled, this setting will cause the request processing pipeline to periodically check system performance counters.
     // If any of those counters are over a built in high threshold (80%), requests will be rejected with a 429 "Too Busy" response
     // The default is "false"
-    "dynamicThrottlesEnabled": "false"
+    "dynamicThrottlesEnabled": false
   }
 }
