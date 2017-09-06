@@ -152,6 +152,10 @@
                             "value": "~1"
                         },
                         {
+                            "name": "ROUTING_EXTENSION_VERSION",
+                            "value": "~0.2"
+                        },
+                        {
                             "name": "WEBSITE_NODE_DEFAULT_VERSION",
                             "value": "6.5.0"
                         },
