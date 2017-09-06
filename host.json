@@ -1,0 +1,42 @@
+{
+  "id": "",
+  "queues": {
+    // The maximum interval in milliseconds between
+    // queue polls. The default is 1 minute.
+    "maxPollingInterval": 2000,
+    // The visibility timeout that will be applied to messages that fail processing
+    // (i.e. the time interval between retries)
+    "visibilityTimeout": "00:00:10",
+    // The number of queue messages to retrieve and process in
+    // parallel (per job function). The default is 16 and the maximum is 32.
+    "batchSize": 16,
+    // The number of times to try processing a message before
+    // moving it to the poison queue. The default is 5.
+    "maxDequeueCount": 5,
+    // The threshold at which a new batch of messages will be fetched.
+    // The default is batchSize/2.
+    "newBatchThreshold": 8
+  },
+  "tracing": {
+    // The tracing level used for console logging.
+    // The default is 'info'. Options are: { off, error, warning, info, verbose }
+    "consoleLevel": "verbose",
+    // Value determining what level of file logging is enabled.
+    // The default is 'debugOnly'. Options are: { never, always, debugOnly }
+    "fileLoggingMode": "debugOnly"
+  },
+  "http": {
+    // The maximum number of outstanding requests that will be held at any given time. 
+    // This limit will include requests that are queued but have not started executing, as well as any in progress executions. 
+    // Any incoming requests over this limit will be rejected with a 429 "Too Busy" response. 
+    // The default is 'unbounded'.
+    "maxOutstandingRequests": "unbounded",
+    // The maximum number of http functions that will be executed in parallel. 
+    // The default is "unbounded".
+    "maxConcurrentRequests": "unbounded",
+    // When enabled, this setting will cause the request processing pipeline to periodically check system performance counters.
+    // If any of those counters are over a built in high threshold (80%), requests will be rejected with a 429 "Too Busy" response
+    // The default is "false"
+    "dynamicThrottlesEnabled": "false"
+  }
+}

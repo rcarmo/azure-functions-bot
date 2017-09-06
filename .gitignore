@@ -58,4 +58,4 @@ typings/
 .env
 
 # Azure template parameter files
-deployment-parameters.json
+arm/deployment-parameters.json

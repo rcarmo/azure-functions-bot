@@ -2,12 +2,12 @@ export SOLUTION_NAME?=faas-bot
 export RESOURCE_GROUP?=faas-bot
 # Keep in mind that App Insights is only available in a few locations
 export LOCATION?=westeurope
-TEMPLATE_FILE:=template.json
-PARAMETERS_FILE:=deployment-parameters.json
+TEMPLATE_FILE:=arm/template.json
+PARAMETERS_FILE:=arm/parameters.json
 
 # Generate template parameters
 params:
-	node genparams.js
+	cd arm; node genparams.js
 
 # Perform template deployment
 deploy:

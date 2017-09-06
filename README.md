@@ -52,6 +52,7 @@ If you don't have _anything_ installed, this is what you need to do (generic ins
         # edit the Makefile defaults for a new site
         make params
         make deploy
+        make view-deployment
 
 
 ## 
