@@ -23,7 +23,8 @@ module.exports = function (context, req) {
                     'content-length': stats.size,
                     'cache-control': 'public, max-age=3600'
                 },
-                body: fs.readFileSync(fileName, null) // TODO: change this to a stream when Azure Functions can deal with stream bindings
+                // TODO: change this to a stream when the Azure Functions runtime is updated to deal with stream bindings
+                body: fs.readFileSync(fileName, null)
             }
         }
         context.done();
