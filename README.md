@@ -1,4 +1,4 @@
-# azure-functions-bot
+# Azure Bots The Hard Way
 
 This template deploys:
 
@@ -30,7 +30,8 @@ Grab `bash`, check out the `Makefile` and you'll be all set.
 * [x] Deploy Storage Account for queues (already part of webjob requirements)
 * [x] Configure Azure Function deployment settings
 * [x] Deploy Redis
-* [ ] Retrieve/Set AppService local Git credentials programmatically
+* [ ] Create Azure Table 
+* [ ] Retrieve/Set AppService local Git credentials and deployment remote programmatically
 * [ ] Provision default queues and tables
 * [ ] Deploy Cognitive Services Account
 * [ ] Enable deployment slots
@@ -48,5 +49,9 @@ If you don't have _anything_ installed, this is what you need to do (generic ins
         az login
         az account list # check available accounts
         az account set -s <UUID> # set working account
+        # edit the Makefile defaults for a new site
         make params
         make deploy
+
+
+## 
