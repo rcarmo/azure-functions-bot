@@ -30,9 +30,13 @@ Grab `bash`, check out the `Makefile` and you'll be all set.
 * [x] Deploy Storage Account for queues (already part of webjob requirements)
 * [x] Configure Azure Function deployment settings
 * [x] Deploy Redis
-* [ ] Create Azure Table 
-* [ ] Retrieve/Set AppService local Git credentials and deployment remote programmatically
+* [x] Retrieve/Set AppService local Git credentials and deployment remote programmatically
+* [ ] Simple bot back-end
+* [ ] Simple web front-end for anonymous chats
+* [ ] Bot registration
 * [ ] Provision default queues and tables
+* [ ] User identity management
+* [ ] State machine
 * [ ] Deploy Cognitive Services Account
 * [ ] Enable deployment slots
 
