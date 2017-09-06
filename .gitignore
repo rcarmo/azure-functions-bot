@@ -57,3 +57,5 @@ typings/
 # dotenv environment variables file
 .env
 
+# Azure template parameter files
+deployment-parameters.json
