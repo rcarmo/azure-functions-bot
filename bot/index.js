@@ -56,7 +56,7 @@ if (process.env.FUNCTIONS_EXTENSION_VERSION) {
             }
         };
         // Pass request  to Bot Framework
-        listener(req, res);
+        listener(req, context.res);
     }
 } else {
     // Local server for testing
