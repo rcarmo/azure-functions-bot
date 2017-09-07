@@ -65,7 +65,7 @@ The following steps require a Microsoft Live ID account (which is typically _not
 * Get the function URL for the `/bot` Azure Function (including key) 
 * Login to https://dev.botframework.com with your Live ID, register a new bot
 * Paste the function URL in the `Messaging Endpoint` field
-* Click on the `` button to go to `apps.dev.microsoft.com`, log in with your Live ID and generate a new App ID and password
+* Click on the `Create Microsoft App ID and password` button to go to `apps.dev.microsoft.com`, log in with your Live ID and generate a new App ID and password
 * Save those somewhere safe (like an `.env` file in the project root, which is _not_ visible to `git`)
 * (Optionally) retrieve the Application Insights instrumentation key from the `Application Settings` tab in the Azure Functions instance
 * Go to the Azure Portal and set the `MICROSOFT_APP_ID` and `MICROSOFT_APP_PASSWORD` environment variables in the `Application Settings` tab
