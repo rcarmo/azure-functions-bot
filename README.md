@@ -22,7 +22,7 @@ Grab `bash`, check out the `Makefile` and you'll be all set.
 ## Requirements
 
 * [Azure CLI 2.0][az]
-* [NodeJS][n] for generating the parameters file (my utmost apologies)
+* [NodeJS][n]
 
 ## To Do:
 
@@ -31,8 +31,8 @@ Grab `bash`, check out the `Makefile` and you'll be all set.
 * [x] Configure Azure Function deployment settings
 * [x] Deploy Redis
 * [x] Retrieve/Set AppService local Git credentials and deployment remote programmatically
-* [ ] Simple static server inside Functions app
-* [ ] Simple bot back-end
+* [x] Simple static server inside Functions app
+* [ ] Simple bot back-end (stalled on )
 * [ ] Simple web front-end for anonymous chats
 * [ ] Bot registration
 * [ ] Provision default queues and tables
