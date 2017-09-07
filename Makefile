@@ -23,6 +23,9 @@ view-deployment:
 delete:
 	az group delete --name $(RESOURCE_GROUP) --no-wait
 
+serve:
+	cd bot; node index.js
+
 # WIP: handle local Git setup (already covered in ARM template)
 setup-scm:
 	# set up the credential store and set the helper to only prompt us daily
