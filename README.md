@@ -14,17 +14,12 @@ Unlike typical Azure templates, this one is completely CLI centric, so there are
 
 Grab `bash`, check out the `Makefile` and you'll be all set.
 
-## Post-Deployment Checklist:
-
-* Check Application Insights activation
-* Get Git credentials from app
-
 ## Requirements
 
 * [Azure CLI 2.0][az]
 * [NodeJS][n]
 
-## To Do:
+## Roadmap:
 
 * [x] Deploy Azure Function environment
 * [x] Deploy Storage Account for queues (already part of webjob requirements)
@@ -32,7 +27,7 @@ Grab `bash`, check out the `Makefile` and you'll be all set.
 * [x] Deploy Redis
 * [x] Retrieve/Set AppService local Git credentials and deployment remote programmatically
 * [x] Simple static server inside Functions app
-* [ ] Simple bot back-end (stalled on Microsoft/BotBuilder#3438)
+* [ ] Simple bot back-end (stalled on [Microsoft/BotBuilder#3438])
 * [ ] Simple web front-end for anonymous chats
 * [ ] Bot registration
 * [ ] Provision default queues and tables
@@ -73,4 +68,4 @@ The following steps require a Microsoft Live ID account (which is typically _not
 * Click on the `` button to go to `apps.dev.microsoft.com`, log in with your Live ID and generate a new App ID and password
 * Save those somewhere safe (like an `.env` file in the project root, which is _not_ visible to `git`)
 * (Optionally) retrieve the Application Insights instrumentation key from the `Application Settings` tab in the Azure Functions instance
-* Go to the Azure Portal and set the MICROSOFT_APP_ID and MICROSOFT_APP_PASSWORD environment variables in the `Application Settings` tab
+* Go to the Azure Portal and set the `MICROSOFT_APP_ID` and `MICROSOFT_APP_PASSWORD` environment variables in the `Application Settings` tab
