@@ -1,7 +1,7 @@
 {
-  "name": "static_server_node",
+  "name": "bot",
   "version": "1.0.0",
-  "description": "Simple Azure Functions static file server",
+  "description": "Simple Azure Functions bot",
   "repository": {
     "type": "git",
     "url": "https://github.com/rcarmo/azure-functions-bot"
@@ -13,6 +13,9 @@
   "author": "rcarmo",
   "license": "MIT",
   "dependencies": {
-    "mime-types": "^2.1.15"
+    "botbuilder": "^3.9.1",
+    "restify": "^5.2.0"
+},
+  "devDependencies": {
   }
 }
