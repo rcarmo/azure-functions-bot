@@ -2,6 +2,7 @@
     "proxies": {
         "files": {
             "matchCondition": {
+                "methods": [ "GET" ],
                 "route": "{*path}"
             },
             "backendUri": "https://%WEBSITE_SITE_NAME%.azurewebsites.net/api/static_server?file={path}"
