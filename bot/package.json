@@ -13,7 +13,7 @@
   "author": "rcarmo",
   "license": "MIT",
   "dependencies": {
-    "botbuilder": "^3.9.1",
+    "botbuilder": "=3.4.2",
     "restify": "^5.2.0"
 },
   "devDependencies": {
