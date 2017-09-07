@@ -28,10 +28,7 @@ bot.dialog('/intro', [
 
 if (process.env.FUNCTIONS_EXTENSION_VERSION) {
     // If we are inside Azure Functions, export the standard handler.
-    module.exports = function (context, req) {
-          // Pass request directly to Bot Framework
-          listener(req, context.res);
-    };
+    module.exports = { "default": connector.listen() }
 } else {
     // Local server for testing
     var server = require('restify').createServer();
