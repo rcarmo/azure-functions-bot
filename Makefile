@@ -10,12 +10,12 @@ params:
 	cd arm; node genparams.js
 
 # Perform template deployment
-deploy:
+provision:
 	-az group create --name $(RESOURCE_GROUP) --location $(LOCATION) --output table 
 	az group deployment create --template-file $(TEMPLATE_FILE) --parameters @$(PARAMETERS_FILE) --resource-group $(RESOURCE_GROUP) --name cli-deployment-$(LOCATION) --output table
 
-# View deployment details
-view-deployment:
+# View Azure Resource Manager deployment status
+view-provisioning:
 	az group deployment operation list --resource-group $(RESOURCE_GROUP) --name cli-deployment-$(LOCATION) \
 	--query "[].{OperationID:operationId,Name:properties.targetResource.resourceName,Type:properties.targetResource.resourceType,State:properties.provisioningState,Status:properties.statusCode}" --output table
 
@@ -25,6 +25,9 @@ delete:
 
 serve:
 	cd bot; node index.js
+
+deploy:
+	git push azure master
 
 # WIP: handle local Git setup (already covered in ARM template)
 setup-scm:
