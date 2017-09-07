@@ -1,4 +1,4 @@
-# Azure Bots The Hard Way
+# Azure Functions Bot Template
 
 This template deploys:
 
