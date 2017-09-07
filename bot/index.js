@@ -30,31 +30,6 @@ if (process.env.FUNCTIONS_EXTENSION_VERSION) {
     // If we are inside Azure Functions, export the standard handler.
     module.exports = function (context, req) {
         context.log("Handling request", req);
-
-        var _status = null;
-        var _body = null;
-        var _respond = function (status, body) {
-            context.res = {
-                status: status || 200,
-                body: body || ''
-            };
-            context.done();
-        };
-        // wrap response
-        var res = {
-            send: function (status, body) {
-                _respond(status, body);
-            },
-            status: function (status) {
-                _status = status;
-            },
-            write: function (body) {
-                _body = body;
-            },
-            end: function () {
-                _respond(_status, _body);
-            }
-        };
         // Pass request  to Bot Framework
         listener(req, context.res);
     }
