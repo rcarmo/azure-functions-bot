@@ -1,12 +1,12 @@
 'use strict';
 
-const builder = require('botbuilder');
-const connector = new builder.ChatConnector({
+var builder = require('botbuilder');
+var connector = new builder.ChatConnector({
     appId: process.env.CHAT_CONNECTOR_APP_ID,
     appPassword: process.env.CHAT_CONNECTOR_APP_PASSWORD
 });
-const listener = connector.listen();
-const bot = new builder.UniversalBot(connector, { persistConversationData: true });
+var listener = connector.listen();
+var bot = new builder.UniversalBot(connector, { persistConversationData: true });
 
 bot.dialog('/', function (session) {
     session.sendTyping();
