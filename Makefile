@@ -39,4 +39,4 @@ setup-scm:
 	$(eval GIT_URL:=$(shell az webapp deployment source config-local-git --name $(SOLUTION_NAME) --resource-group $(RESOURCE_GROUP) -o tsv))
 	# add a new remote to this repository so we can "git push azure master"
 	git remote add azure $(GIT_URL)
-	az webapp deployment user set --user-name $(SOLUTION_NAME)
+	az webapp deployment user set --user-name $(USER)

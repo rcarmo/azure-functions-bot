@@ -2,8 +2,8 @@
 
 var builder = require('botbuilder');
 var connector = new builder.ChatConnector({
-    appId: process.env.CHAT_CONNECTOR_APP_ID,
-    appPassword: process.env.CHAT_CONNECTOR_APP_PASSWORD
+    appId: process.env.MICROSOFT_APP_ID,
+    appPassword: process.env.MICROSOFT_APP_PASSWORD
 });
 var listener = connector.listen();
 var bot = new builder.UniversalBot(connector, { persistConversationData: true });
@@ -30,7 +30,6 @@ if (process.env.FUNCTIONS_EXTENSION_VERSION) {
     // If we are inside Azure Functions, export the standard handler.
     module.exports = function (context, req) {
         context.log("Passing body", req.body);
-        req.body = req.rawBody;
         listener(req, context.res);
     }
 } else {
