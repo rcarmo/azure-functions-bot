@@ -27,7 +27,7 @@ Grab `bash`, check out the `Makefile` and you'll be all set.
 * [x] Deploy Redis
 * [x] Retrieve/Set AppService local Git credentials and deployment remote programmatically
 * [x] Simple static server inside Functions app
-* [ ] Simple bot back-end (stalled on [Microsoft/BotBuilder#3438](https://github.com/Microsoft/BotBuilder/issues/3438))
+* [x] Simple bot back-end 
 * [ ] Simple web front-end for anonymous chats
 * [ ] Bot registration
 * [ ] Provision default queues and tables
